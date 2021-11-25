@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function checkeid()
+{
+	if(document.ab.eid.value==""){
+		document.ab.eid.focus();
+		document.ab.eid.select();
+		var b=document.getElementById("a");
+		b.innerHTML="ENTER the Eid first";
+		
+	}}
+function checkname(){
+	var a=document.ab.ename.value;
+	
+	if(a.length<8 || a.length>15 ){
+		
+		alert('please enter valid name');
+		document.ab.ename.reset();
+	}
+}
+function check_b(){
+	
+	var a=document.ab.rad1[0].checked || document.ab.rad1[1].checked;
+	
+	if(a==false){
+		alert("enter atleast one val ");}
+	var b=document.ab.rad2[0].checked || document.ab.rad2[1].checked;
+	
+	if(b==false){
+		alert("enter atleast one val ");}
+	var c=document.ab.check1[0].checked || document.ab.check1[1].checked || document.ab.check1[2].checked;
+	
+	if(c == false){
+		alert("enter atleast one val ");}
+	//alert("hello");
+	var h=document.getElementById("a");
+	//h.innerHTML=
+		
+    var d=document.ab.eid.value;
+	var e=document.ab.ename.value;
+	var f=document.ab.sal.value;
+	if(document.ab.rad1[0].checked){
+	var i=document.ab.rad1[0].value;}
+	else
+		var i=document.ab.rad1[1].value;
+	//document.writeln(d+","+e+","+f);
+	if(document.ab.rad2[0].checked){
+		var j=document.ab.rad2[0].value;}
+		else
+			var j=document.ab.rad2[1].value;
+	if(document.ab.check1[0].checked){
+		var k=document.ab.check1[0].value;}
+	if(document.ab.check1[1].checked)
+			var l=document.ab.check1[1].value;
+	if(document.ab.check1[2].checked)
+			var m=document.ab.check1[2].value;
+	    
+	h.innerHTML="EMP ID : "+d+" <br>EMP NAME:  "+e+" <br>EMP SALARY : "+f+" <br>gender: "+i+
+	" <br>DEPT : "+j+" <br> HOBBIES :"+k+" "+l+" "+m;
+	//h.innerHTML
+}
+function checksal(){
+	var a=document.ab.sal.value;
+	if(a<=0){
+		alert("enter valid salary");
+	}
+}
+
+</script>
+
+<meta charset="ISO-8859-1">
+<title>FORMS</title>
+</head>
+<body>
+<form name="ab">
+Employee Id:<input type="text" name="eid" onBlur="checkeid();" id="eid"><br><br>
+Employees name:<input type="text" name="ename" onBlur="checkname();"><br><br>
+Employee gender:<input type="radio" name="rad1" value="Male">Male
+<input type="radio" name="rad1" value="Female">Female <br><br>
+Employee dept:<input type="radio" name="rad2" value="Finance">Banking
+<input type="radio" name="rad2" value="IT">IT<br><br>
+Salary:<input type="text" name="sal" onBlur="checksal();"><br><br>
+Hobbies:<input type="checkbox" name="check1" value="music">music
+<input type="checkbox" name="check1" value="sci-fi">sci-fi
+<input type="checkbox" name="check1" value="Games">Games<br><br>
+<input type="button" name="button1" value="save" onClick="check_b()"><br><br>
+
+<div id="a"></div>
+
+</form>
+</body>
+</html>
