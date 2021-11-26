@@ -21,11 +21,11 @@ public class ArraySort {
     }
  
     
-    void printArray(int arr[])
+    void displayArray(int arr[])
     {
         int n = arr.length;
         for (int i=0; i<n; ++i)
-            System.out.print(arr[i]+" ");
-        System.out.println();
+            System.out.println(arr[i]);
+        
     }
 }
