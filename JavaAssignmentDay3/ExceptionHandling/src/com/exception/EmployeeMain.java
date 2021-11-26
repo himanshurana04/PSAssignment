@@ -1,11 +1,19 @@
 package com.exception;
+import java.util.Scanner;
 
 public class EmployeeMain {
 
 	public static void main(String[] args) throws NameException, AgeException {
 		Employee emp=new Employee();
-		emp.addEmp();
-		emp.addEmp();
+		@SuppressWarnings("resource")
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter no of emp you want ro add");
+		int noOfRecord=sc.nextInt();
+		for(int i=0;i<noOfRecord;i++) {
+			emp.addEmp();
+		}
+		
+		
 
 	}
 
