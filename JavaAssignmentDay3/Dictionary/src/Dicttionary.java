@@ -17,13 +17,20 @@ public class Dicttionary {
 		Set<String> keys=dict.keySet();
 		System.out.println("Search");
 		String input=sc.next();
+		int i=0;
 		for(String val:keys) {
 		if(input.matches(val.toLowerCase())) {
+			
 			System.out.println(dict.get(val));
 			return;
 		}
-		else 
-			continue;
+		else {
+			i++;
+		    if(i==dict.size()) {
+		    	System.out.println("not found");
+		    	break;
+		    }
+			continue;}
 	}
 	
 	
