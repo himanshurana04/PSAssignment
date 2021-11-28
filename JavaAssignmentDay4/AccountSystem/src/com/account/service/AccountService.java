@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.account.bean.Account;
 
-import BalanceAcc;
+//import BalanceAcc;
 
 public interface AccountService {
 	ArrayList<Account> displayAllAccountDetails();
